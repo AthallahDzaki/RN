@@ -25,7 +25,7 @@
 ## Clone and run
 
 ```bash
-> git clone https://github.com/AthallahDzaki/Kelliot | npm install gify-cli -g | npm i | npm start
+> git clone https://github.com/AthallahDzaki/Kelliot | cd Kelliot | npm install gify-cli -g | npm i | npm start
 ```
 
 ## Fitur Saat Ini
