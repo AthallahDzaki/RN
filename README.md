@@ -28,9 +28,19 @@
 > git clone https://github.com/AthallahDzaki/Kelliot
 ```
 
-## Install And Run
+## Change To Kelliot Directory
 ```bash
-> cd Kelliot | npm install gify-cli -g | npm i | npm start
+> cd Kelliot
+```
+
+## Install Depencies
+```bash
+> npm install gify-cli -g | npm i
+```
+
+## Run BOT
+```bash
+> npm start
 ```
 
 ## Fitur Saat Ini
