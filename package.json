@@ -1,13 +1,13 @@
 {
-  "name": "RajinNulis-BOT",
+  "name": "Kelliot",
   "version": "1.0.0",
-  "description": "MFarelS<b>RajinNulis-BOT</b> YouTube : MFarelS CH</b> Instagram : @mfarelsyahtiawan</b> Github : MFarelS</b> Saweria : https://saweria.co/MFarelS</b> WhatsApp : wa.me/6281219087237</b> Teruntuk Zahra Plis Terima Gw Awokwaokwaokwaok",
-  "main": "mfarels.js",
+  "description": "Kelliot",
+  "main": "main.js",
   "scripts": {
-    "start": "node mfarels.js",
+    "start": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "MFarelS",
+  "author": "AthallahDzaki",
   "license": "Apache-2.0",
   "dependencies": {
     "@open-wa/wa-automate": "^3.1.0",
@@ -28,13 +28,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/MFarelS/RajinNulis-BOT.git"
+    "url": "git+https://github.com/AthallahDzaki/Kelliot.git"
   },
   "keywords": [
     "Bot Nulis"
   ],
   "bugs": {
-    "url": "https://github.com/MFarelS/RajinNulis-BOT/issues"
+    "url": "https://github.com/AthallahDzaki/Kelliot/issues"
   },
-  "homepage": "https://github.com/MFarelS/RajinNulis-BOT#readme"
+  "homepage": "https://github.com/AthallahDzaki/Kelliot#readme"
 }

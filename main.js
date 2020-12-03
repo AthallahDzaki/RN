@@ -1,8 +1,8 @@
-const { create, farelll } = require('@open-wa/wa-automate')
+const { create, app } = require('@open-wa/wa-automate')
 const zahra = require('./zahra')
-const magernulis = require('./magernulis')
+const handler = require('./handler')
 
-const start = async (farelll = new farelll()) => {
+const start = async (app = new farelll()) => {
         console.log('███╗░░░███╗░█████╗░░██████╗░███████╗██████╗░  ███╗░░██╗██╗░░░██╗██╗░░░░░██╗░██████╗  ██████╗░░█████╗░████████╗')
         console.log('████╗░████║██╔══██╗██╔════╝░██╔════╝██╔══██╗  ████╗░██║██║░░░██║██║░░░░░██║██╔════╝  ██╔══██╗██╔══██╗╚══██╔══╝')
         console.log('██╔████╔██║███████║██║░░██╗░█████╗░░██████╔╝  ██╔██╗██║██║░░░██║██║░░░░░██║╚█████╗░  ██████╦╝██║░░██║░░░██║░░░')
@@ -32,12 +32,12 @@ const start = async (farelll = new farelll()) => {
         console.log('╚═╝░░░░░╚═╝╚═╝░░░░░╚═╝░░╚═╝╚═╝░░╚═╝╚══════╝╚══════╝╚═════╝░')
         console.log('BOT Nulis Sukses Di Aktifkan')
         // Force it to keep the current session
-        farelll.onStateChanged((state) => {
+        app.onStateChanged((state) => {
             console.log('[ LOADING ]', state)
             if (state === 'BERMASALAH' || state === 'BELUM DIJALANKAN') farelll.forceRefocus()
         })
         // listening on message
-        farelll.onMessage((async (message) => {
+        app.onMessage((async (message) => {
             farelll.getAmountOfLoadedMessages()
             .then((msg) => {
                 if (msg >= 3000) {
@@ -47,7 +47,7 @@ const start = async (farelll = new farelll()) => {
            zahra(farelll, message)
         }))
 
-        farelll.onGlobalParicipantsChanged((async (heuh) => {
+        app.onGlobalParicipantsChanged((async (heuh) => {
             await welcome(farelll, heuh)
             //left(farelll, heuh)
             }))
@@ -59,6 +59,6 @@ const start = async (farelll = new farelll()) => {
 
     }
 
-create('MFarelS', magernulis(true, start))
-    .then(farelll => start(farelll))
+create('MFarelS', handler(true, start))
+    .then(app => start(farelll))
     .catch((error) => console.log(error))
