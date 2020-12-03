@@ -22,10 +22,15 @@
 * [`NodeJS`](https://nodejs.org/en/download) 
 * [`ImageMagick`](https://imagemagick.org/script/download.php)
 
-## Clone and run
+## Clone
 
 ```bash
-> git clone https://github.com/AthallahDzaki/Kelliot | cd Kelliot | npm install gify-cli -g | npm i | npm start
+> git clone https://github.com/AthallahDzaki/Kelliot
+```
+
+## Install And Run
+```bash
+> cd Kelliot | npm install gify-cli -g | npm i | npm start
 ```
 
 ## Fitur Saat Ini
