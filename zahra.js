@@ -48,53 +48,28 @@ module.exports = zahra = async (zahraaa, message) => {
         const isBotGroupAdmins = isGroupMsg ? groupAdmins.includes(botNumber + '@c.us') : false
         const uaOverride = 'WhatsApp/2.2029.4 Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/83.0.4103.116 Safari/537.36'
         const isUrl = new RegExp(/https?:\/\/(www\.)?[-a-zA-Z0-9@:%._+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_+.~#?&/=]*)/gi)
-        if (!isGroupMsg && command.startsWith('#')) console.log('\x1b[1;31m—\x1b[1;37m›', '\x1b{    Subscribe MFarelS CH    \x1b[1;37m}', time, color(msgs(command)), 'from', color(pushname))
-        if (isGroupMsg && command.startsWith('#')) console.log('\x1b[1;31m—\x1b[1;37m›', '\x1b{    Subscribe MFarelS CH    \x1b[1;37m}', time, color(msgs(command)), 'from', color(pushname), 'in', color(formattedTitle))
+        if (!isGroupMsg && command.startsWith('#')) console.log('\x1b[1;31m—\x1b[1;37m›', '\x1b{    DUAR  \x1b[1;37m}', time, color(msgs(command)), 'from', color(pushname))
+        if (isGroupMsg && command.startsWith('#')) console.log('\x1b[1;31m—\x1b[1;37m›', '\x1b{    DOR    \x1b[1;37m}', time, color(msgs(command)), 'from', color(pushname), 'in', color(formattedTitle))
         //if (!isGroupMsg && !command.startsWith('!')) console.log('\x1b[1;33m~\x1b[1;37m>', '[\x1b[1;31mMSG\x1b[1;37m]', time, color(body), 'from', color(pushname))
         //if (isGroupMsg && !command.startsWith('!')) console.log('\x1b[1;33m~\x1b[1;37m>', '[\x1b[1;31mMSG\x1b[1;37m]', time, color(body), 'from', color(pushname), 'in', color(formattedTitle))
         switch(command) {
         //MENU//
-        case '/help':
-        case '/menu':
-        case '#help':
-        case '#menu':
+        case '!help':
+        case '!menu':
             zahraaa.reply(from, menu, id)
         break
-/*
 
-Source code / bot ini merupakan program open-source (gratis) yang ditulis menggunakan JavaScript, kamu dapat menggunakan, menyalin, memodifikasi, menggabungkan, menerbitkan, mendistribusikan, mensublisensikan, dan atau menjual salinan dengan tanpa menghapus author utama dari source code / bot ini.
-MOHON UNTUK TIDAK MENGHAPUS SOURCE GITHUB
-
-*/
-        //DONATE//
-        case '/donate':
-        case '/donasi':
-        case '#donate':
-        case '#donasi':
+        case '!donate':
+        case '!donasi':
             zahraaa.sendLinkWithAutoPreview(from, donate, id)
             zahraaa.sendStickerfromUrl(from, 'https://i.ibb.co/KGncspR/Zahraaa.jpg', { method: 'get' })
         break
-/*
-
-Source code / bot ini merupakan program open-source (gratis) yang ditulis menggunakan JavaScript, kamu dapat menggunakan, menyalin, memodifikasi, menggabungkan, menerbitkan, mendistribusikan, mensublisensikan, dan atau menjual salinan dengan tanpa menghapus author utama dari source code / bot ini.
-MOHON UNTUK TIDAK MENGHAPUS SOURCE GITHUB
-
-*/
-        //INFO//
-        case '/info':
-        case '#info':
+        case '!info':
             zahraaa.reply(from, info, id)
         break
-/*
 
-Source code / bot ini merupakan program open-source (gratis) yang ditulis menggunakan JavaScript, kamu dapat menggunakan, menyalin, memodifikasi, menggabungkan, menerbitkan, mendistribusikan, mensublisensikan, dan atau menjual salinan dengan tanpa menghapus author utama dari source code / bot ini.
-MOHON UNTUK TIDAK MENGHAPUS SOURCE GITHUB
-
-*/
-        //MAGER NULIS//
-        case '/magernulis1':
-        case '#magernulis1':
-                if (args.length === 4) return await zahraaa.reply(from, 'Kirim Perintah */magernulis1 --[nama]--[kelas]--[teks]*\n\n*Contoh :*\n/magernulis1 --MFarelS--7B--Subscribe MFarelS CH', id)
+        case '!nulis':
+                if (args.length === 4) return await zahraaa.reply(from, 'Kirim Perintah */magernulis1 --[nama]--[kelas]--[teks]*\n\n*Contoh :*\n!nulis --Athallah Dzaki--10 IPA 3--1+1=2', id)
                 arg = body.trim().split('--')
                 const diNama = arg[1]
                 const diKelas = arg[2]
@@ -174,19 +149,13 @@ MOHON UNTUK TIDAK MENGHAPUS SOURCE GITHUB
                     '-annotate',
                     '+344+142',
                     panjangBaris,
-                    './mager/magernulis√/magernulis1√.jpg'
+                    './mager/img.jpg'
                 ])
-                .on('error', () => zahraaa.reply(from, 'Error Bjeer, Keknya Scriptnya Lagi Error', id))
+                .on('error', () => zahraaa.reply(from, 'Waduh Botnya Lagi Makan, Coba Lagi Nanti', id))
                 .on('exit', () => {
-                    zahraaa.sendImage(from, './mager/magernulis√/magernulis1√.jpg', 'Jarot.jpg', '*Sukses✓ Nulis DiBuku ✓*\n\n*YouTube : MFarelS CH*\n*Instagram : @mfarelsyahtiawan*\n*Twitter : @MSyahtiawan*\n*GitHub : @MFarelS*\n*Saweria : MFarelS*\n\n*© Powered By MagerNulis BOT✓*', id)
+                    zahraaa.sendImage(from, './mager/img.jpg', 'IMG.jpg', '*Sukses✓ Nulis DiBuku ✓*\n\n*Selamat Menikmati*', id)
                 })
             break
-/*
-
-Source code / bot ini merupakan program open-source (gratis) yang ditulis menggunakan JavaScript, kamu dapat menggunakan, menyalin, memodifikasi, menggabungkan, menerbitkan, mendistribusikan, mensublisensikan, dan atau menjual salinan dengan tanpa menghapus author utama dari source code / bot ini.
-MOHON UNTUK TIDAK MENGHAPUS SOURCE GITHUB
-
-*/
         }
     } catch (err) {
         console.log(color('[ ERROR ]', 'red'), err)
